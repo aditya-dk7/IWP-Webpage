@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>BlockBuster Inc. | Generate a random Movie</title>
+</head>
+<body>
+    <nav class="navbar container py-1 " role="navigation" aria-label="main navigation">
+        <div class="navbar-brand">
+            <a class="navbar-item" href="index.html">
+                <img src="images/BLOCKBUSTER INC..svg" width="250">
+            </a>
+        </div>
+        <div class="navbar-item navbar-end">
+            <a href="generateMovie.html" class="contribute button-animation change-font">
+                GENERATE MOVIE
+            </a>
+        </div>
+        <div class="navbar-end">
+            <button class="contribute button-animation change-font">Live on Product Hunt 🏅</button>
+        </div>
+    </nav>
+    <section class="section">
+        <container class="container">
+            <div class="columns is-vcentered">
+                <div class="column has-textcentered">
+                    <div class="select is-primary">
+                        <select id="get__selected__item__">
+                            <option>Random Genre</option>
+                            <option>Action</option>
+                            <option>Adventure</option>
+                            <option>Romance</option>
+                            <option>Animation</option>
+                            <option>Comedy</option>
+                            <option>Fantasy</option>
+                            <option>Crime</option>
+                            <option>Drama</option>
+                            <option>Family</option>
+                            <option>Thriller</option>
+                            <option>Biography</option>
+                            <option>History</option>
+                            <option>Sci-Fi</option>
+                            <option>Musical</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="column">
+                    <div class="buttons">
+                        <button class="button is-primary" onclick="getMovieRecommendation()">GET RECOMMENDATION</button>
+                    </div>
+                </div>
+            </div>
+        </container>
+    </section>
+    <section class="section">
+        <container class="container ">
+            <div class="columns is-vcentered">
+                <div class="column">
+                    <h1 id="random__movie__name__" class="hero-content change-font mb-2"></h1>
+                    <p id="random__movie__cast__" class="hero-sub-sub-content change-font mb-1"></p>
+                    <p id="random__movie__year__" class="hero-sub-sub-content change-font mb-1"></p>
+                    <p id="random__movie__rating__" class="hero-sub-sub-content change-font mb-1"></p>
+                </div>
+                <div class="column">
+                    <img id="random__movie__image__" width="400px" height="500px">
+                </div>
+            </div>
+        </container>
+        <script src="app.js"></script>
+</body>
+
+</html>
