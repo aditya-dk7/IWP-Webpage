@@ -5,6 +5,7 @@ function getMovieRecommendation(){
     var movieImage = document.getElementById("random__movie__image__");
     var movieRating = document.getElementById("random__movie__rating__");
     var getSelectedGenre = document.getElementById("get__selected__item__");
+    var movieDesc = document.getElementById("random__movie__desc__");
     url = "http://127.0.0.1:6767/api/v1/resources/movies/random";
     if (getSelectedGenre.value != "Random Genre") {
         url = "http://127.0.0.1:6767/api/v1/resources/movies/random?genre=" + getSelectedGenre.value;
@@ -26,6 +27,7 @@ function getMovieRecommendation(){
                 }else{
                     movieRating.innerHTML = "";
                 }
+                movieDesc.innerHTML = repo.desc;
                 
               });          
         }
