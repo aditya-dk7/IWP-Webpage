@@ -7,9 +7,9 @@ function getMovieRecommendation(){
     var getSelectedGenre = document.getElementById("get__selected__item__");
     var movieDesc = document.getElementById("random__movie__desc__");
     var movieTrailer = document.getElementById("random__movie__trailer__");
-    url = "http://127.0.0.1:6767/api/v1/resources/movies/random";
+    url = "http://movieapidk7.herokuapp.com/api/v1/resources/movies/random";
     if (getSelectedGenre.value != "Random Genre") {
-        url = "http://127.0.0.1:6767/api/v1/resources/movies/random?genre=" + getSelectedGenre.value;
+        url = "http://movieapidk7.herokuapp.com/api/v1/resources/movies/random?genre=" + getSelectedGenre.value;
     }
     const xhr = new XMLHttpRequest();
     xhr.open('GET', url);
