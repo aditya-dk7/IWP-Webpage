@@ -1,4 +1,4 @@
-# IWP-Webpage
+# BlockBuster Inc.
 Welcome to the repository of BlockBuster Inc!!!
 Our website satisfies your hunger for movies by giving you intelligent recommendations on top-rated movies from IMDB.<br>
 You can easily view movies that fall into the categories of your favorite genre and share them to watch with your friends.<br>
