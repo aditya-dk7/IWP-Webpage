@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.2/css/bulma.min.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <script src="https://kit.fontawesome.com/8e90cc648b.js" crossorigin="anonymous"></script>
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="stylesheet" href="style.css">
+    <title>Blockbuster Inc.</title>
+</head>
+<body class="light">
+    
+    <div class="full-content">
+        <nav class="navbar is-spaced navbar-bg">
+            <div class="navbar-brand">
+                <a class="navbar-item" href="index.html">
+                    <img src="images-static/BLOCKBUSTER INC..svg" alt="Blockbuster Inc." width="290">
+                </a>
+                <div class="navbar-burger" data-target="navbarExampleTransparentExample">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        
+            <div id="navbarExampleTransparentExample" class="navbar-menu">
+        
+                <div class="navbar-end">
+                    <div class="navbar-item">
+                        <div class="field is-grouped">
+                            <p class="control">
+                                <a class="bd-tw-button button header-button">
+                                    <span>
+                                        Login
+                                    </span>
+                                </a>
+                            </p>
+                            <p class="control">
+                                <a class="button header-button main-button">
+                                    <span>Join for free</span>
+                                </a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        <section>
+            <div class="genre-section">
+                <select name="genre" id="get__selected__item__" class="type">
+                    <option value="Random">Random</option>
+                    <option value="Action">Action</option>
+                    <option value="Adventure">Adventure</option>
+                    <option value="Romance">Romance</option>
+                    <option value="Animation">Animation</option>
+                    <option value="Comedy">Comedy</option>
+                    <option value="Fantasy">Fantasy</option>
+                    <option value="Crime">Crime</option>
+                    <option value="Drama">Drama</option>
+                    <option value="Family">Family</option>
+                    <option value="Thriller">Thriller</option>
+                    <option value="Biography">Biography</option>
+                    <option value="History">History</option>
+                    <option value="Sci-Fi">Sci-Fi</option>
+                    <option value="Musical">Musical</option>
+                </select>
+                <button id="recommendationBtn" onclick="getAnotherSuggestion()">Get Suggestion</button>
+            </div>
+        </section>
+
+        <section class="hero-section" style="padding-bottom: 10em;">
+            <div class="hero-container">
+                <div class="columns">
+                    <div class="column is-two-fifths">
+                        <div class="image-col">
+                            <img id="random__movie__image__" src="images-static/movie-3.png" alt="" class="movie-image">
+                        </div>
+                    </div>
+                    <div class="column">
+                        <div class="movie-content-data">
+                            <p class="movie-title" id="random__movie__name__">Jungle Cruise</p>
+                            
+                            <div class="movie-description">
+                                <button class="desc-tag" id="random__movie__year__">2021</button>
+                                <button class="desc-tag" id="random__movie__genre__">Action</button>
+                                
+                                <button class="desc-tag play-button" id="playButton"><i class="fas fa-play"></i>Play Trailer</button>
+                                <br><br>
+                                <div>   
+                                    <button class="desc-tag" id="random__movie__cast__">Henry Cavill, Amy Adams</button> 
+                                    <br><br>
+                                    <button class="desc-tag" id="random__movie__time__">1h 52m</button>
+                                </div>
+                            </div>
+
+                            <div class="modal" id="modal">
+                                <div class="modal-background"></div>
+                                <div class="modal-content">
+                                    <iframe id="random__movie__trailer__" width="560" height="315" src="https://www.youtube.com/embed/f_HvoipFcA8" title="YouTube video player"
+                                        frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                        allowfullscreen></iframe>
+                                </div>
+                                <button class="modal-close is-large" aria-label="close" id="close-btn-modal"></button>
+                            </div>
+
+                            <div class="rating-row">
+                                <img src="images-static/imdb.png" width="70" alt="">
+                                <div class="rating" id="random__movie__rating__" >7.3</div>
+                            </div>
+
+                            <p class="overview-heading">Overview</p>
+                            <p class="overview" id="random__movie__desc__">
+                                Reuniting in the present, the Avengers place the Stones into a gauntlet that Stark, Banner, and Rocket built. Banner, having the most resistance to their radiation, wields the gauntlet and reverses Thanos's disintegrations. Meanwhile, 2014-Nebula, impersonating her future self, uses the time machine to transport 2014-Thanos and his warship to the present, destroying the Avengers Compound in the process. Present-day Nebula convinces 2014-Gamora to betray Thanos, but is unable to convince 2014-Nebula and kills her. Thanos overpowers Stark, Thor, and a Mjolnir-wielding Rogers and summons his army to retrieve the Stones, intent on using them to destroy the universe and create a new one. A restored Stephen Strange arrives with other sorcerers, the restored Avengers and Guardians of the Galaxy, the Ravagers, and the armies of Wakanda and Asgard to fight Thanos's army. Danvers also shows up and destroys Thanos's warship, but Thanos overpowers her and seizes the gauntlet. Stark grabs the Stones and uses them to disintegrate Thanos and his army, but the strain of using the Stones kills him.
+                            </p>
+
+                            <div class="button-row">
+                                <button id="like-btn"><i class="fas fa-heart" id="like-icon"></i><span>Like</span></button>
+                                <button>
+                                    <a href="whatsapp://send?text=Lets watch this movie! 🙌" data-action="share/whatsapp/share" target="_blank" class="share-btn">
+                                    <i class="fab fa-whatsapp"></i>
+                                    Share on WhatsApp
+                                </a>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        
+    </div>
+
+    
+    <script src="like.js"></script>
+    <script src="playvideo.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>

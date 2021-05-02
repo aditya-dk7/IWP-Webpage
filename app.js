@@ -1,39 +1,46 @@
-function getMovieRecommendation(){
-    var movieName = document.getElementById("random__movie__name__");
-    var movieCast = document.getElementById("random__movie__cast__");
-    var movieYear = document.getElementById("random__movie__year__");
-    var movieImage = document.getElementById("random__movie__image__");
-    var movieRating = document.getElementById("random__movie__rating__");
-    var getSelectedGenre = document.getElementById("get__selected__item__");
-    var movieDesc = document.getElementById("random__movie__desc__");
-    var movieTrailer = document.getElementById("random__movie__trailer__");
-    url = "https://movieapidk7.herokuapp.com/api/v1/resources/movies/random";
-    if (getSelectedGenre.value != "Random Genre") {
-        url = "https://movieapidk7.herokuapp.com/api/v1/resources/movies/random?genre=" + getSelectedGenre.value;
-    }
-    const xhr = new XMLHttpRequest();
-    xhr.open('GET', url);
-    xhr.responseType = 'json';
-    xhr.onload = function (e) {
-        if (this.status == 200) {
-            console.log(this.response);
-            var response = this.response
-            response.forEach((repo) => {
-                movieName.innerHTML = repo.title;
-                movieCast.innerHTML = repo.star;
-                movieYear.innerHTML = repo.year;
-                movieImage.src = repo.imgurl;
-                if(repo.rating){
-                    movieRating.innerHTML = repo.rating;
-                }else{
-                    movieRating.innerHTML = "";
-                }
-                movieDesc.innerHTML = repo.desc;
-                movieTrailer.src = repo.youtubeurl;
-                
-              });          
-        }
-    };
-    xhr.send();
-    
+document.addEventListener('DOMContentLoaded', () => {
+
+  // Get all "navbar-burger" elements
+  const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
+
+  // Check if there are any navbar burgers
+  if ($navbarBurgers.length > 0) {
+
+    // Add a click event on each of them
+    $navbarBurgers.forEach( el => {
+      el.addEventListener('click', () => {
+
+        // Get the target from the "data-target" attribute
+        const target = el.dataset.target;
+        const $target = document.getElementById(target);
+
+        // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
+        el.classList.toggle('is-active');
+        $target.classList.toggle('is-active');
+
+      });
+    });
+  }
+
+});
+
+const recommendationBtn = document.getElementById('recommendationBtn');
+
+function suggestion(){
+  recommendationBtn.innerText = 'Get another suggestion';
 }
+
+
+recommendationBtn.addEventListener('click', suggestion)
+
+
+
+
+
+
+
+
+
+
+
+
