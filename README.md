@@ -19,4 +19,4 @@ Note: You are free to use our code for your own projects.
 <a href="https://github.com/bajajsanchit" style="color: inherit;">Sanchit</a> <br>
 <a href="https://github.com/devesh040399" style="color: inherit;">Devesh</a> <br>
 Riten <br>
-Varun <br>
+<a href="https://github.com/varunchopra17" style="color: inherit;">Varun</a> <br>
