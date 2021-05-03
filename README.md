@@ -17,6 +17,6 @@ Note: You are free to use our code for your own projects.
 # Authors
 <a href="https://github.com/aditya-dk7" style="color: inherit;">Aditya</a> <br>
 <a href="https://github.com/bajajsanchit" style="color: inherit;">Sanchit</a> <br>
+<a href="https://github.com/devesh040399" style="color: inherit;">Devesh</a> <br>
 Riten <br>
-Devesh <br>
 Varun <br>
