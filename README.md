@@ -18,5 +18,5 @@ Note: You are free to use our code for your own projects.
 <a href="https://github.com/aditya-dk7" style="color: inherit;">Aditya</a> <br>
 <a href="https://github.com/bajajsanchit" style="color: inherit;">Sanchit</a> <br>
 <a href="https://github.com/devesh040399" style="color: inherit;">Devesh</a> <br>
-Riten <br>
 <a href="https://github.com/varunchopra17" style="color: inherit;">Varun</a> <br>
+<a href="https://github.com/thebarcelonaguy2000" style="color: inherit;">Riten</a> <br>
